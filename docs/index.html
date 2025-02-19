@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Rich Windows & Doors 文档</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="门窗生产管理系统文档">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* 隐藏侧边栏和导航栏 */
+    body[data-page="README.md"] .sidebar, 
+    body[data-page="README.md"] .sidebar-toggle, 
+    body[data-page="README.md"] .app-nav {
+      display: none !important;
+    }
+    
+    /* 只在主页让内容占满宽度并居中 */
+    body[data-page="README.md"] .content {
+      left: 0 !important;
+      padding-top: 0 !important;
+      width: 100% !important;
+      text-align: center;
+    }
+
+    /* 主页的链接样式 */
+    body[data-page="README.md"] .markdown-section a {
+      text-decoration: none !important;
+      color: #42b983;
+      font-size: 1.5em;
+      display: block;
+      margin: 30px 0;
+      transition: color 0.3s;
+    }
+
+    body[data-page="README.md"] .markdown-section a:hover {
+      color: #3eaf7c;
+    }
+
+    /* 主页的标题样式 */
+    body[data-page="README.md"] .markdown-section h2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    /* 返回主页按钮样式 - 修改位置到右上角 */
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;  /* 改为 right */
+      z-index: 1000;
+      padding: 8px 16px;
+      background-color: #42b983;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s;
+      display: none; /* 默认隐藏 */
+    }
+
+    .home-button:hover {
+      background-color: #3eaf7c;
+    }
+
+    /* 在非主页显示按钮 */
+    body:not([data-page="README.md"]) .home-button {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- 添加返回主页按钮 -->
+  <a href="#/" class="home-button">返回主页</a>
+  
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Rich Windows & Doors',
+      repo: false,
+      loadNavbar: false,
+      loadSidebar: false,
+      subMaxLevel: 3,
+      maxLevel: 4,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 6
+      },
+      copyCode: {
+        buttonText: '复制代码',
+        errorText: '错误',
+        successText: '已复制'
+      }
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+</body>
+</html> 
